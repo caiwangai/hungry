@@ -5,7 +5,9 @@
 </template>
 <script>
     export default{
-
+         data(){
+             seller:{}
+         }
     }
 </script>
 <style lang="stylus">

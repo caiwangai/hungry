@@ -1,10 +1,10 @@
 <template>
   <div id="app">
       <v-header></v-header>
-      <div class="tab">
+      
         <div class="tab">
            <div class="tab-item">
-            <router-link to="/goods" >商品</router-link> -->
+            <router-link to="/goods" >商品</router-link>
             <!-- <a v-link="{ path: '/goods'}">商品</a> -->
              </div>
            <div class="tab-item">
@@ -15,13 +15,14 @@
               <router-link to="/seller" >商家</router-link>
               </div>
         </div>
-      </div>
+     
       <router-view></router-view>
   </div>
 </template>
 
 <script>
 import header from './components/header/header'
+
 export default{
   components:{
     'v-header':header
@@ -29,6 +30,8 @@ export default{
 }
 </script>
 <style lang="stylus">
+ @import "./common/stylus/index.styl"
+  // @import "./common/stylus/minxin.styl"
 #app
   .tab
     display:flex
@@ -41,6 +44,8 @@ export default{
          &>a
             display block
             font-size 14px
+            border-1px(blue)
+            // border-bottom  1px solid red
             color rgb(77,85,93)
             &.active
                color red
