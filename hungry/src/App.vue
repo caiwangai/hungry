@@ -3,14 +3,20 @@
       <v-header></v-header>
       <div class="tab">
         <div class="tab">
-           <div class="tab-item">商品</div>
-           <div class="tab-item">评论</div>
-            <div class="tab-item">商家</div>
+           <div class="tab-item">
+            <router-link to="/goods" tag="li">商品</router-link> -->
+            <!-- <a v-link="{ path: '/goods'}">商品</a> -->
+             </div>
+           <div class="tab-item">
+             <router-link to="/ratings" tag="li">评论</router-link>
+             </div>
+            <div class="tab-item">
+              <!-- <a v-link="{path:'/seller'}">商家</a> -->
+              <router-link to="/seller" tag="li">商家</router-link>
+              </div>
         </div>
       </div>
-      <div class="content">
-        contentdsds
-      </div>
+      <router-view></router-view>
   </div>
 </template>
 
