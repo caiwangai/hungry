@@ -4,15 +4,15 @@
       <div class="tab">
         <div class="tab">
            <div class="tab-item">
-            <router-link to="/goods" tag="li">商品</router-link> -->
+            <router-link to="/goods" >商品</router-link> -->
             <!-- <a v-link="{ path: '/goods'}">商品</a> -->
              </div>
            <div class="tab-item">
-             <router-link to="/ratings" tag="li">评论</router-link>
+             <router-link to="/ratings" >评论</router-link>
              </div>
             <div class="tab-item">
               <!-- <a v-link="{path:'/seller'}">商家</a> -->
-              <router-link to="/seller" tag="li">商家</router-link>
+              <router-link to="/seller" >商家</router-link>
               </div>
         </div>
       </div>
@@ -38,6 +38,13 @@ export default{
     .tab-item
          flex :4
          text-align center
+         &>a
+            display block
+            font-size 14px
+            color rgb(77,85,93)
+            &.active
+               color red
+               
 
 
     

@@ -5,7 +5,8 @@ import seller from 'components/seller/seller.vue'
 import ratings from 'components/ratings/ratings.vue'
 Vue.use(Router)
 export default new Router({
-    base: '/ratings',
+    mode: 'history',
+    linkActiveClass: 'active',
     routes: [
         // {
         //   path: '/',
@@ -19,7 +20,7 @@ export default new Router({
         }, {
             path: "/seller",
             component: seller,
-            alias: '*'
+            alias: '/'
         },
         {
             path: "/ratings",
