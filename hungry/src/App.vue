@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-      <v-header></v-header>
+      <v-header :seller="seller"></v-header>
       
         <div class="tab">
            <div class="tab-item">
@@ -26,7 +26,18 @@ import header from './components/header/header'
 export default{
   components:{
     'v-header':header
-  }
+  },
+  data(){
+      return {
+         seller:{}
+       }
+         },
+ created(){
+        this.$http.get("/api/seller").then((respons)=>{
+        console.log(respons.body.data);
+        this.seller=respons.body.data;
+             })
+         }
 }
 </script>
 <style lang="stylus">

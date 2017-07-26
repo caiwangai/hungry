@@ -1,12 +1,16 @@
 <template>
-    <div class="header">
-        我是一个header
-    </div>
+     <div class="header">
+        <div class="avatar">
+        <img width="64" height="64" v-bind:src="seller.avatar" />
+      </div>
+     </div>
 </template>
 <script>
     export default{
-         data(){
-             seller:{}
+         props:{
+             seller:{
+                 
+             }
          }
     }
 </script>
